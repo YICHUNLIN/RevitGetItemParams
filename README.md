@@ -1,3 +1,5 @@
+# 使用說明
+
 
 # Addins
 GetItemParams.addin 位置要放
@@ -8,3 +10,6 @@ C:\ProgramData\Autodesk\Revit\Addins\2017
 
 ## modify AddInId
 AddInId 也要改，是一組UUID，可以隨便改個數字就好
+
+
+
