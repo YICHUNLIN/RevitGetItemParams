@@ -3,7 +3,7 @@
     <AddIn Type="Command">
 		<Assembly> "D:\105BIM\RevitGetItemParams\GetItemParams\GetItemParams\bin\Debug\GetItemParams.dll"</Assembly>
         <AddInId>26D19F71-A684-426F-8B3E-C0EE624FC41B</AddInId>
-        <FullClassName>BIM.EXcmd</FullClassName>
+        <FullClassName>GetItemParams.EXcmd</FullClassName>
         <Text>BIM_Output_Params</Text> 
         <VendorId>Lin, I-Chun</VendorId>
         <VendorDescription>Vic Lin one person Company</VendorDescription> 
