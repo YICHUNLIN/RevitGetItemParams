@@ -32,6 +32,7 @@ namespace GetItemParams
             _cusps = new List<CusParameter>();
         }
 
+        
         public string getParmValueByName(string name)
         {
             foreach(CusParameter cp in this._cusps)

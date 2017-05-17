@@ -67,10 +67,19 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\NewForm.Designer.cs" />
+    <Compile Include="View\NewNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\NewNewForm.Designer.cs">
+      <DependentUpon>NewNewForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="View\CusForm.resx" />
     <EmbeddedResource Include="View\NewForm.resx" />
+    <EmbeddedResource Include="View\NewNewForm.resx">
+      <DependentUpon>NewNewForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
