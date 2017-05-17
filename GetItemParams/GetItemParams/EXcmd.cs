@@ -26,7 +26,6 @@ namespace GetItemParams
             this._ic = ic;
             Thread ofthread = new Thread(openForm);
             ofthread.Start();
-            MessageBox.Show("hi");
 
             return Result.Succeeded;
         }

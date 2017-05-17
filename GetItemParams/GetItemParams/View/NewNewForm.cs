@@ -32,5 +32,10 @@ namespace GetItemParams.View
                 MessageBox.Show("Output Finish");
             }
         }
+
+        public void setItemController(ItemController ic)
+        {
+            this._ic = ic;
+        }
     }
 }

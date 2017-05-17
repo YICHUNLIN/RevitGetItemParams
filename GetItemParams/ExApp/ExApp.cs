@@ -17,8 +17,8 @@ namespace ExApp
     [Autodesk.Revit.Attributes.Transaction(Autodesk.Revit.Attributes.TransactionMode.Manual)]
     class ExApp : IExternalApplication
     {
-        public static UIControlledApplication _cachedUiCtrApp;
         ItemController _ic = null;
+        GetItemParams.View.NewNewForm _outputForm = null;
 
         public Result OnShutdown(UIControlledApplication application)
         {
@@ -29,36 +29,41 @@ namespace ExApp
         {
             application.ViewActivated += new EventHandler<ViewActivatedEventArgs>(onAcgivitedView);
             application.ControlledApplication.DocumentOpened += new EventHandler<DocumentOpenedEventArgs>(OnDocOpened);
-            //application.Idling += new EventHandler<IdlingEventArgs>(onIdling);
-            _cachedUiCtrApp = application;
-            _cachedUiCtrApp.Idling += new EventHandler<IdlingEventArgs>(onIdling);
+            application.Idling += new EventHandler<IdlingEventArgs>(onIdling);
+            //_cachedUiCtrApp = application;
+            //_cachedUiCtrApp.Idling += new EventHandler<IdlingEventArgs>(onIdling);
             return Result.Succeeded;
         }
         public void onIdling(object sender,IdlingEventArgs iea)
         {
-            MessageBox.Show("idling");
+            //MessageBox.Show("idling");
             //一直觸發
-            _cachedUiCtrApp.Idling -= onIdling;
             UIApplication uiapp = sender as UIApplication;
+
+            
             if (uiapp != null)
             {
                 UIDocument uidoc = uiapp.ActiveUIDocument;
-                Document doc = uidoc.Document;
-
+               // Document doc = uidoc.Document;
                 CusParameters cp = new CusParameters(uidoc);
                 ItemsModel im = new ItemsModel();
                 ItemController ic = new ItemController(im, cp);
                 this._ic = ic;
-                Thread ofthread = new Thread(openForm);
-                ofthread.Start();
+                if (_outputForm != null)
+                {
+                    _outputForm.setItemController(ic);
+                }
+                else{ 
+                    Thread ofthread = new Thread(openForm);
+                    ofthread.Start();
+                }
 
             }
         }
         public void openForm()
         {
-
-            GetItemParams.View.NewNewForm outputForm = new GetItemParams.View.NewNewForm(this._ic);
-            outputForm.ShowDialog();
+            _outputForm = new GetItemParams.View.NewNewForm(this._ic);
+             _outputForm.ShowDialog();
         }
         public void onAcgivitedView(object sender, ViewActivatedEventArgs vae)
         {

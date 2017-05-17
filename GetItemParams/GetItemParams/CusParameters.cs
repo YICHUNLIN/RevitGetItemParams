@@ -32,7 +32,15 @@ namespace GetItemParams
             _cusps = new List<CusParameter>();
         }
 
-        
+        public void setUIDOC(UIDocument uidoc)
+        {
+
+            _uidoc = uidoc;
+            _elemids = _uidoc.Selection.GetElementIds();
+            _doc = _uidoc.Document;
+            _cusps = new List<CusParameter>();
+        }
+
         public string getParmValueByName(string name)
         {
             foreach(CusParameter cp in this._cusps)

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+    <AddIn Type="Application">
+      <Name>ExApp</Name>
+		  <Assembly> "D:\105BIM\newClone\RevitGetItemParams\GetItemParams\ExApp\bin\Debug\ExApp.dll"</Assembly>
+      <AddInId>26D19F73-A684-426E-8B3E-C0FE624FC41B</AddInId>
+      <FullClassName>ExApp.ExApp</FullClassName>
+      <VendorId>Lin, I-Chun</VendorId>
+      <VendorDescription>Vic Lin one person Company</VendorDescription> 
+    </AddIn>
+</RevitAddIns>
+
