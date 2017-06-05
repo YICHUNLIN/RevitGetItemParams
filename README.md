@@ -2,8 +2,9 @@
 
 
 # Addins
-GetItemParams.addin 位置要放
+GetItemParams.addin & exapp.addin 位置要放
 C:\ProgramData\Autodesk\Revit\Addins\2017
+
 
 ## modify Assembly
 "資料夾位置\GetItemParams\GetItemParams\bin\Debug\GetItemParams.dll"
