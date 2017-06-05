@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetItemParams", "GetItemPar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExApp", "ExApp\ExApp.csproj", "{64F22293-E966-4DAA-B778-DDB61AEEDAEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geometry", "Geometry\Geometry.csproj", "{641B823C-313E-42AB-B16C-5FCE6E679884}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{64F22293-E966-4DAA-B778-DDB61AEEDAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F22293-E966-4DAA-B778-DDB61AEEDAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F22293-E966-4DAA-B778-DDB61AEEDAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641B823C-313E-42AB-B16C-5FCE6E679884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641B823C-313E-42AB-B16C-5FCE6E679884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641B823C-313E-42AB-B16C-5FCE6E679884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641B823C-313E-42AB-B16C-5FCE6E679884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

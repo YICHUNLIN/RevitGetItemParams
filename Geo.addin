@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+    <AddIn Type="Command">
+		<Assembly> "D:\105BIM\newClone\RevitGetItemParams\GetItemParams\Geometry\bin\Debug\Geometry.dll"</Assembly>
+        <AddInId>26D19F71-A694-426F-8B3E-C0EE624FC41A</AddInId>
+        <FullClassName>Geometry.EXcmd</FullClassName>
+        <Text>JoinGeometry</Text> 
+        <VendorId>Lin, I-Chun</VendorId>
+        <VendorDescription>Vic Lin one person Company</VendorDescription> 
+    </AddIn>
+</RevitAddIns>
