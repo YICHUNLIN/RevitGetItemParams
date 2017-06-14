@@ -24,7 +24,7 @@ namespace Geometry
             Document doc = uidoc.Document;
             ICollection<ElementId> elemids = uidoc.Selection.GetElementIds();
             MessageBox.Show("You select " + elemids.Count.ToString());
-            
+            string msg = "";
             Transaction trans = new Transaction(doc);
             foreach (ElementId fid in elemids)
             {
@@ -37,8 +37,32 @@ namespace Geometry
                 {
                     try
                     {
+                        /*
+                        string floorofirstelement = "1";
+                        string floorofsecondelement = "2";
+                        foreach(Parameter pf in firstElement.Parameters)
+                        {
+                            if(pf.Definition.Name == "底部約束" || pf.Definition.Name == "基準樓層" || pf.Definition.Name == "參考樓層")
+                            {
+                                floorofirstelement = pf.AsString();
+                                break;
+                            }
+                        }
+                        foreach (Parameter pf in secondElement.Parameters)
+                        {
+                            if (pf.Definition.Name == "底部約束" || pf.Definition.Name == "基準樓層" || pf.Definition.Name == "參考樓層")
+                            {
+                                floorofsecondelement = pf.AsString();
+                                break;
+                            }
+                        }
+                        if(floorofirstelement != floorofsecondelement)
+                        {
+                            continue;
+                        }*/
                         String fn = firstElement.Category.Name;
                         String sn = secondElement.Category.Name;
+                        msg += "<"+fn +","+ sn+">";
                         trans.Start("join");
                         if (fn == column)
                         {
@@ -84,7 +108,7 @@ namespace Geometry
                         }
                         else
                         {
-
+                            //MessageBox.Show(msg);
                         }
                         trans.Commit();
                     } catch (Exception e) {
